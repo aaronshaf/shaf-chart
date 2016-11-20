@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>shaf-chart</title>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+  <script src="https://unpkg.com/@webcomponents/custom-elements@1.0.0-alpha.3"></script>
+  <script src="index.js"></script>
+  <link href="styles.css" rel="stylesheet">
+  <style>
+    pre { margin-top: 8px; }
+    label, .label-text {
+      vertical-align: middle;
+      font-weight: normal;
+      margin-bottom: 0; /* override bootstrap */
+    }
+    .example {
+      margin-top: 36px;
+      margin-bottom: 36px;
+    }
+  </style>
+  <script>
+  // https://github.com/component/escape-html/blob/master/index.js
+  var matchHtmlRegExp = /[""&<>]/;
+  function escapeHtml(a){var b=""+a,c=matchHtmlRegExp.exec(b);if(!c)return b;var d,e="",f=0,g=0;for(f=c.index;f<b.length;f++){switch(b.charCodeAt(f)){case 34:d="&quot;";break;case 38:d="&amp;";break;case 39:d="&#39;";break;case 60:d="&lt;";break;case 62:d="&gt;";break;default:continue}g!==f&&(e+=b.substring(g,f)),g=f+1,e+=d}return g!==f?e+b.substring(g,f):e}
+  </script>
+</head>
+<body>
+  <div style="margin: 48px;">
+    <h1>shaf-chart</h1>
+    <div class="example">
+      <label>
+        <shaf-chart>
+          <input id="example1" type="checkbox" name="joyful" value="yes" checked />
+        </shaf-chart>
+        <span class="label-text">Wrapper label tag</span>
+      </label>
+      <pre id="example1code"></pre>
+    </div>
+    <script>
+    function showExample1 (event) {
+      example1code.innerHTML = escapeHtml(
+`<label>
+  <shaf-chart>
+    <input type="checkbox" name="joyful" value="yes" />
+  </shaf-chart>
+  <span>Wrapper label tag</span>
+</label>`)
+    }
+    showExample1()
+    </script>
+  </div>
+
+  <script src="https://unpkg.com/github-corner@1.0.13"></script>
+  <github-corner href="https://github.com/aaronshaf/shaf-chart"></github-corner>
+</body>

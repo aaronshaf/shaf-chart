@@ -1,0 +1,29 @@
+{
+  "scripts": {
+    "dev": "webpack define.js index.js -p --watch",
+    "build": "webpack define.js index.js -p",
+    "docs": "webpack define.js docs/index.js -p"
+  },
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "styles.css",
+    "imports.html"
+  ],
+  "devDependencies": {
+    "babel-core": "^6.18.2",
+    "babel-loader": "^6.2.7",
+    "babel-plugin-transform-react-jsx": "^6.8.0",
+    "babel-preset-es2015": "^6.18.0",
+    "classnames": "^2.2.5",
+    "document-register-element": "^1.3.0",
+    "preact": "^6.4.0",
+    "webpack": "^1.13.3"
+  },
+  "keywords": [
+    "custom",
+    "element",
+    "web-components"
+  ],
+  "license": "MIT"
+}
