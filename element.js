@@ -1,18 +1,21 @@
 /** @jsx preact.h */
 import preact from 'preact'
-import MyComponent from './components'
-
+import ChartComponent from './components'
 export default class MyCustomElement extends BabelHTMLElement {
   attributeChangedCallback(name, oldValue, newValue) {
     if (this.rendered) { this.updateRendering() }
   }
 
   connectedCallback() {
+    this.table = this.querySelector('table')
+    // this.table.className += ' shaf-toggle-screenreader-only'
     this.updateRendering()
   }
 
   updateRendering() {
-    const a = preact.render(<MyComponent />, this, this.lastChild)
+    preact.render(<ChartComponent
+      table={this.table}
+    />, this, this.lastChild)
     this.rendered = true
   }
 }

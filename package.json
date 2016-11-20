@@ -25,5 +25,17 @@
     "element",
     "web-components"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "name": "shaf-chart",
+  "description": "Custom element that upgrades table to a chart",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aaronshaf/shaf-chart.git"
+  },
+  "author": "Aaron Shafovaloff <aaronshaf@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/aaronshaf/shaf-chart/issues"
+  },
+  "homepage": "https://github.com/aaronshaf/shaf-chart#readme"
 }

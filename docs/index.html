@@ -3,9 +3,10 @@
 <head>
   <title>shaf-chart</title>
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+  <script src="https://unpkg.com/webcomponents.js@0.7.23/HTMLImports.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/document-register-element/1.1.1/document-register-element.js"></script>
-  <script src="https://unpkg.com/shaf-chart"></script>
-  <link href="https://unpkg.com/shaf-chart/styles.css" rel="stylesheet">
+  <script src="https://unpkg.com/github-corner@1.0.13"></script>
+  <link href="https://unpkg.com/shaf-chart/imports.html" rel="import">
   <style>
     pre { margin-top: 8px; }
     label, .label-text {
@@ -28,28 +29,61 @@
   <div style="margin: 48px;">
     <h1>shaf-chart</h1>
     <div class="example">
-      <label>
-        <shaf-chart>
-          <input id="example1" type="checkbox" name="joyful" value="yes" checked />
-        </shaf-chart>
-        <span class="label-text">Wrapper label tag</span>
-      </label>
-      <pre id="example1code"></pre>
+      <shaf-chart>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Unique visitors</th>
+              <th>Pageviews</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>2016-11-18</th>
+              <td>31</td>
+              <td>51</td>
+            </tr>
+            <tr>
+              <th>2016-11-19</th>
+              <td>34</td>
+              <td>76</td>
+            </tr>
+          </tbody>
+        </table>
+      </shaf-chart>
     </div>
+    <pre id="example1code"></pre>
     <script>
     function showExample1 (event) {
       example1code.innerHTML = escapeHtml(
-`<label>
-  <shaf-chart>
-    <input type="checkbox" name="joyful" value="yes" />
-  </shaf-chart>
-  <span>Wrapper label tag</span>
-</label>`)
+`<shaf-chart>
+  <table>
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Unique visitors</th>
+        <th>Pageviews</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>2016-11-18</th>
+        <td>31</td>
+        <td>51</td>
+      </tr>
+      <tr>
+        <th>2016-11-19</th>
+        <td>34</td>
+        <td>76</td>
+      </tr>
+    </tbody>
+  </table>
+</shaf-chart>`)
     }
     showExample1()
     </script>
   </div>
 
-  <script src="https://unpkg.com/github-corner@1.0.13"></script>
   <github-corner href="https://github.com/aaronshaf/shaf-chart"></github-corner>
 </body>
