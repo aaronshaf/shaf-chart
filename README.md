@@ -7,7 +7,7 @@
 ```
 
 ```html
-<link href="https://unpkg.com/shaf-chart@1.0.3/imports.html" rel="import">
+<link href="https://unpkg.com/shaf-chart@1.0.4/imports.html" rel="import">
 ```
 
 ## Basic usage
