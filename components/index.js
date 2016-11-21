@@ -36,8 +36,8 @@ export default class ChartComponent extends Component {
       datasets.push({
         label: th.textContent,
         data: [],
-        backgroundColor: backgroundColors.slice(index - 1, index),
-        borderColor: borderColors.slice(index - 1, index)
+        backgroundColor: backgroundColors.slice(index - 1, index)[0],
+        borderColor: borderColors.slice(index - 1, index)[0]
       })
     })
     const tbodyRows = this.props.table.querySelectorAll('tbody tr')
@@ -59,10 +59,12 @@ export default class ChartComponent extends Component {
       },
       options: {
         scales: {
+          xAxes: [{
+            stacked: true
+          }],
           yAxes: [{
-            ticks: {
-              beginAtZero: true
-            }
+            stacked: true,
+            ticks: { beginAtZero: true }
           }]
         }
       }
