@@ -2,7 +2,7 @@
 import preact from 'preact'
 import ChartComponent from './components'
 
-export default class MyCustomElement extends BabelHTMLElement {
+export default class ShafChartElement extends BabelHTMLElement {
   attributeChangedCallback(name, oldValue, newValue) {
     if (this.rendered) { this.updateRendering() }
   }

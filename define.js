@@ -1,3 +1,3 @@
-import MyCustomElement from './element'
+import ShafChartElement from './element'
 
-customElements.define('shaf-chart', MyCustomElement)
+customElements.define('shaf-chart', ShafChartElement)
