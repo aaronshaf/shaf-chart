@@ -30,7 +30,8 @@ export default class ChartComponent extends Component {
     ]
 
     let datasets = []
-    Array.from(this.props.table.querySelector('thead tr').querySelectorAll('th')).forEach((th, index) => {
+    Array.from(this.props.table.querySelectorAll('thead tr th'))
+    .forEach((th, index) => {
       if (index === 0) return
       datasets.push({
         label: th.textContent,
