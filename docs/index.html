@@ -76,6 +76,7 @@
         element.querySelector('.shaf-chart-container').remove()
       }
       element.querySelector('table').removeAttribute('class')
+      element.querySelector('table').removeAttribute('style')
       example1code.innerHTML = escapeHtml(element.outerHTML)
     }
     showExample1()
