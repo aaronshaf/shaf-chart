@@ -75,13 +75,13 @@
     <script>
     function showExample1 (event) {
       const element = document.querySelector('shaf-chart').cloneNode(true)
-      element.querySelector('.shaf-chart-container').remove()
+      if (element.querySelector('.shaf-chart-container')) {
+        element.querySelector('.shaf-chart-container').remove()
+      }
       element.querySelector('table').removeAttribute('class')
       example1code.innerHTML = escapeHtml(element.outerHTML)
     }
-    setTimeout(() => {
-      showExample1()
-    }, 0)
+    showExample1()
     </script>
   </div>
 
