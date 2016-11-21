@@ -77,7 +77,9 @@
       element.querySelector('table').removeAttribute('class')
       example1code.innerHTML = escapeHtml(element.outerHTML)
     }
-    showExample1()
+    setTimeout(() => {
+      showExample1()
+    }, 0)
     </script>
   </div>
 
