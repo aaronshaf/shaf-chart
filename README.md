@@ -4,7 +4,7 @@
 
 ```html
 <script src="https://unpkg.com/webcomponents.js@0.7.23/HTMLImports.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/document-register-element/1.1.1/document-register-element.js"></script>
+<script src="https://unpkg.com/@webcomponents/custom-elements@1.0.0-alpha.3"></script>
 <link href="https://unpkg.com/shaf-chart/imports.html" rel="import">
 ```
 
