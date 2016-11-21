@@ -1,7 +1,22 @@
 ## Installation
 
+### Without HTML Imports (recommended)
+
 ```html
-<!-- HTML Imports and Custom Elements v1 polyfills -->
+<!-- Custom Elements v1 polyfill -->
+<script src="https://unpkg.com/@webcomponents/custom-elements@1.0.0-alpha.3"></script>
+```
+
+```html
+<script src="https://unpkg.com/chart.js@2.4.0/dist/Chart.min.js"></script>
+<link href="https://unpkg.com/shaf-chart@1.0.5/styles.css" rel="stylesheet">
+<script src="https://unpkg.com/shaf-chart@1.0.5/index.js"></script>
+```
+
+### With HTML Imports
+
+```html
+<!-- HTML Imports and Custom Elements v1 polyfill -->
 <script src="https://unpkg.com/webcomponents.js@0.7.23/HTMLImports.min.js"></script>
 <script src="https://unpkg.com/@webcomponents/custom-elements@1.0.0-alpha.3"></script>
 ```
