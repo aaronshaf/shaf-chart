@@ -55,6 +55,4 @@
 
 ## Roadmap
 
-* Fix Safari color issues
-* Check IE
 * Inherit width/height from element attributes
