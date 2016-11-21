@@ -1,10 +1,12 @@
-## Getting started
-
-### With HTML Imports
+## Installation
 
 ```html
+<!-- HTML Imports and Custom Elements polyfills -->
 <script src="https://unpkg.com/webcomponents.js@0.7.23/HTMLImports.min.js"></script>
 <script src="https://unpkg.com/@webcomponents/custom-elements@1.0.0-alpha.3"></script>
+```
+
+```html
 <link href="https://unpkg.com/shaf-chart/imports.html" rel="import">
 ```
 
@@ -12,7 +14,7 @@
 
 ```html
 <shaf-chart>
-  <table class="table">
+  <table>
     <thead>
       <tr>
         <th>Date</th>
@@ -35,3 +37,9 @@
   </table>
 </shaf-chart>
 ```
+
+## Roadmap
+
+* Fix Safari color issues
+* Check IE
+* Inherit width/height from element attributes

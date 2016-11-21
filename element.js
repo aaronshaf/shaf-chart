@@ -7,15 +7,18 @@ export default class MyCustomElement extends BabelHTMLElement {
   }
 
   connectedCallback() {
+    this.container = document.createElement('div')
+    this.container.className = 'shaf-chart-container'
+    this.insertBefore(this.container, this.firstChild)
     this.table = this.querySelector('table')
-    // this.table.className += ' shaf-toggle-screenreader-only'
+    this.table.className += ' shaf-screenreader-only'
     this.updateRendering()
   }
 
   updateRendering() {
     preact.render(<ChartComponent
       table={this.table}
-    />, this, this.lastChild)
+    />, this.container, this.container.lastChild)
     this.rendered = true
   }
 }

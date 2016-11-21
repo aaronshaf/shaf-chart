@@ -70,8 +70,8 @@ export default class ChartComponent extends Component {
 
   render () {
     return (
-      <div style="width: 600px;height: 300px;">
-        <canvas ref={this.setCanvas} width="600" height="300"></canvas>
+      <div style="width: 700px;">
+        <canvas ref={this.setCanvas} width="700" height="300"></canvas>
       </div>
     )
   }

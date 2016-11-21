@@ -29,36 +29,9 @@
   <div style="margin: 48px;">
     <h1>shaf-chart</h1>
     <div class="example">
-      <shaf-chart>
-        <table class="table">
-          <thead>
-            <tr>
-              <th>Date</th>
-              <th>Unique visitors</th>
-              <th>Pageviews</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th>2016-11-18</th>
-              <td>31</td>
-              <td>51</td>
-            </tr>
-            <tr>
-              <th>2016-11-19</th>
-              <td>34</td>
-              <td>76</td>
-            </tr>
-          </tbody>
-        </table>
-      </shaf-chart>
-    </div>
-    <pre id="example1code"></pre>
-    <script>
-    function showExample1 (event) {
-      example1code.innerHTML = escapeHtml(
-`<shaf-chart>
-  <table>
+<!-- indentation removed for pretty code example generation -->
+<shaf-chart>
+  <table class="table">
     <thead>
       <tr>
         <th>Date</th>
@@ -67,6 +40,21 @@
       </tr>
     </thead>
     <tbody>
+      <tr>
+        <th>2016-11-15</th>
+        <td>18</td>
+        <td>39</td>
+      </tr>
+      <tr>
+        <th>2016-11-16</th>
+        <td>21</td>
+        <td>42</td>
+      </tr>
+      <tr>
+        <th>2016-11-17</th>
+        <td>20</td>
+        <td>41</td>
+      </tr>
       <tr>
         <th>2016-11-18</th>
         <td>31</td>
@@ -79,7 +67,15 @@
       </tr>
     </tbody>
   </table>
-</shaf-chart>`)
+</shaf-chart>
+    </div>
+    <pre id="example1code"></pre>
+    <script>
+    function showExample1 (event) {
+      const element = document.querySelector('shaf-chart').cloneNode(true)
+      element.querySelector('.shaf-chart-container').remove()
+      element.querySelector('table').removeAttribute('class')
+      example1code.innerHTML = escapeHtml(element.outerHTML)
     }
     showExample1()
     </script>
