@@ -9,7 +9,6 @@
 
 ```html
 <script src="https://unpkg.com/chart.js@2.4.0/dist/Chart.min.js"></script>
-<link href="https://unpkg.com/shaf-chart@1.0.6/styles.css" rel="stylesheet">
 <script src="https://unpkg.com/shaf-chart@1.0.6/index.js"></script>
 ```
 
@@ -56,3 +55,5 @@
 ## Roadmap
 
 * Inherit width/height from element attributes
+* show-table attribute
+* Use MutationObserver to detect table changes?

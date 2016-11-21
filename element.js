@@ -1,6 +1,7 @@
 /** @jsx preact.h */
 import preact from 'preact'
 import ChartComponent from './components'
+
 export default class MyCustomElement extends BabelHTMLElement {
   attributeChangedCallback(name, oldValue, newValue) {
     if (this.rendered) { this.updateRendering() }
@@ -11,7 +12,16 @@ export default class MyCustomElement extends BabelHTMLElement {
     this.container.className = 'shaf-chart-container'
     this.insertBefore(this.container, this.firstChild)
     this.table = this.querySelector('table')
-    this.table.className += ' shaf-screenreader-only'
+    Object.assign(this.table.style, {
+      border: '0',
+      clip: 'rect(0 0 0 0)',
+      height: '1px',
+      margin: '-1px',
+      overflow: 'hidden',
+      padding: '0',
+      position: 'absolute',
+      width: '1px'
+    })
     this.updateRendering()
   }
 
