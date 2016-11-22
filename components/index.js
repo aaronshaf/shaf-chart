@@ -33,6 +33,7 @@ export default class ChartComponent extends Component {
     this.chart.data.labels = labels
     this.chart.data.datasets = datasets
     this.chart.update()
+    this.chart.resize()
   }
 
   componentDidMount () {
