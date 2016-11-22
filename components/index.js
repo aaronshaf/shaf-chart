@@ -81,6 +81,7 @@ function getDataFromTable (table) {
     if (index === 0) return
     datasets.push({
       label: th.textContent,
+      lineTension: 0,
       data: [],
       backgroundColor: backgroundColors.slice(index - 1, index)[0],
       borderColor: borderColors.slice(index - 1, index)[0]
