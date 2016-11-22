@@ -9,7 +9,7 @@
 
 ```html
 <script src="https://unpkg.com/chart.js@2.4.0/dist/Chart.min.js"></script>
-<script src="https://unpkg.com/shaf-chart@1.1.0/index.js"></script>
+<script src="https://unpkg.com/shaf-chart@1.1.1/index.js"></script>
 ```
 
 ### With HTML Imports
@@ -21,7 +21,7 @@
 ```
 
 ```html
-<link href="https://unpkg.com/shaf-chart@1.1.0/imports.html" rel="import">
+<link href="https://unpkg.com/shaf-chart@1.1.1/imports.html" rel="import">
 ```
 
 ## Basic usage
