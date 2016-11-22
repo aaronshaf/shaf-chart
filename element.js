@@ -12,6 +12,13 @@ export default class ShafChartElement extends BabelHTMLElement {
     this.container.className = 'shaf-chart-container'
     this.insertBefore(this.container, this.firstChild)
     this.table = this.querySelector('table')
+    if (MutationObserver) {
+      this.observer = new MutationObserver((mutations) => {
+        this.updateRendering()
+      })
+      const observerConfig = { attributes: true, childList: true, characterData: true, subtree: true }
+      this.observer.observe(this.table, observerConfig)
+    }
     Object.assign(this.table.style, {
       border: '0',
       clip: 'rect(0 0 0 0)',
@@ -23,6 +30,12 @@ export default class ShafChartElement extends BabelHTMLElement {
       width: '1px'
     })
     this.updateRendering()
+  }
+
+  disconnectedCallback() {
+    if (this.observer) {
+      this.observer.disconnect()
+    }
   }
 
   updateRendering() {
