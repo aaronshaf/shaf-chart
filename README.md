@@ -56,4 +56,3 @@
 
 * Inherit width/height from element attributes
 * show-table attribute
-* Use MutationObserver to detect table changes?
