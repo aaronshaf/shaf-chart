@@ -26,7 +26,7 @@ export default class ShafChartElement extends BabelHTMLElement {
       margin: '-1px',
       overflow: 'hidden',
       padding: '0',
-      position: 'absolute',
+      position: 'fixed',
       width: '1px'
     })
     this.updateRendering()
