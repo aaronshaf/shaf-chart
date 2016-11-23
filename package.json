@@ -37,5 +37,8 @@
   "bugs": {
     "url": "https://github.com/aaronshaf/shaf-chart/issues"
   },
-  "homepage": "https://github.com/aaronshaf/shaf-chart#readme"
+  "homepage": "https://github.com/aaronshaf/shaf-chart#readme",
+  "dependencies": {
+    "babel-html-element": "^1.0.3"
+  }
 }

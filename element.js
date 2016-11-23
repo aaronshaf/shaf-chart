@@ -1,8 +1,9 @@
 /** @jsx preact.h */
 import preact from 'preact'
 import ChartComponent from './components'
+import HTMLElement from 'babel-html-element'
 
-export default class ShafChartElement extends BabelHTMLElement {
+export default class ShafChartElement extends HTMLElement {
   attributeChangedCallback(name, oldValue, newValue) {
     if (this.rendered) { this.updateRendering() }
   }
@@ -45,11 +46,3 @@ export default class ShafChartElement extends BabelHTMLElement {
     this.rendered = true
   }
 }
-
-// https://github.com/w3c/webcomponents/issues/587#issuecomment-254126763
-function BabelHTMLElement() {
-  const newTarget = this.__proto__.constructor
-  return Reflect.construct(HTMLElement, [], newTarget)
-}
-Object.setPrototypeOf(BabelHTMLElement, HTMLElement)
-Object.setPrototypeOf(BabelHTMLElement.prototype, HTMLElement.prototype)
