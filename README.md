@@ -1,7 +1,5 @@
 ## Installation
 
-### Without HTML Imports (recommended)
-
 ```html
 <!-- Custom Elements v1 polyfill -->
 <script src="https://unpkg.com/@webcomponents/custom-elements@1.0.0-alpha.3"></script>
@@ -10,18 +8,6 @@
 ```html
 <script src="https://unpkg.com/chart.js@2.4.0/dist/Chart.min.js"></script>
 <script src="https://unpkg.com/shaf-chart@1.1.5/index.js"></script>
-```
-
-### With HTML Imports
-
-```html
-<!-- HTML Imports and Custom Elements v1 polyfills -->
-<script src="https://unpkg.com/webcomponents.js@0.7.23/HTMLImports.min.js"></script>
-<script src="https://unpkg.com/@webcomponents/custom-elements@1.0.0-alpha.3"></script>
-```
-
-```html
-<link href="https://unpkg.com/shaf-chart@1.1.5/imports.html" rel="import">
 ```
 
 ## Basic usage
@@ -56,3 +42,11 @@
 
 * Inherit width/height from element attributes
 * show-table attribute
+
+## See also
+
+* [shaf-button](https://github.com/aaronshaf/shaf-button)
+* [shaf-toggle](https://github.com/aaronshaf/shaf-toggle)
+* [shaf-star-rating](https://github.com/aaronshaf/shaf-star-rating)
+* [shaf-unified-diff](https://github.com/aaronshaf/shaf-unified-diff)
+* [shaf-timeago](https://github.com/aaronshaf/shaf-timeago)
