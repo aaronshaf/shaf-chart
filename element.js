@@ -9,6 +9,16 @@ export default class ShafChartElement extends HTMLElement {
   }
 
   connectedCallback() {
+    if (this.querySelector('table')) {
+      this.init()
+    } else {
+      window.requestAnimationFrame(() => {
+        this.init()
+      })
+    }
+  }
+
+  init() {
     this.container = document.createElement('div')
     this.container.className = 'shaf-chart-container'
     this.insertBefore(this.container, this.firstChild)
